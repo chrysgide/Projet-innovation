@@ -38,6 +38,15 @@
 		  </div>
 		</nav>
 
+		<!-- gestion de notification -->
+		<?php 
+			// On vérifie si une notification existe on l'affiche puis on vide de le contenu de la variable de session liée aux notifications
+			if(isset($_SESSION['notification'])){
+				echo $_SESSION['notification'];
+				$_SESSION['notification'] = "";
+			}
+		?>
+
 		<!--
 		Voici ton ancien code que tu dois supprimer toi même
 		<div class="row">

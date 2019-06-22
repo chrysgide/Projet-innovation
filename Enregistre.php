@@ -71,7 +71,7 @@
 			            }
         
 					?>
-			    <input type="submit" value="Enregistrez" id="bouton_envoi">
+			    <input type="submit" name="submit" value="Enregistrez" id="bouton_envoi">
 				</form>
 
 			     		 
