@@ -37,38 +37,41 @@ header {
 
 /* Menu*/
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+/* la meilleur approche ici est de customiser les classes de base de bootstrap */
+.active {
+  background-color: #3DA154;
+}
+
+.nav-link {
+  padding: 18px 55px;
+  color: white !important;
+  font-weight: 500;
+}
+.nav-item{
+  padding-left: 50px;
+  padding-right: 50px;
+  border-right: 2px solid white;
+}
+.nav-item:hover{
+  background-color: #3DA154;
+}
+.navbar-nav{
   background-color: #333;
 }
 
-li {
-  float: left;
-  border-right:1px solid #bbb;
+.searh_btn{
+
 }
 
-li:last-child {
-  border-right: none;
-}
-
-li a {
-  display: block;
-  color: white;
+footer{
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  color:white;
+  font-weight: 400;
+  background-color: #3DA154;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
 }
-
-li a:hover:not(.active) {
-  background-color: #111;
-}
-
-.active {
-  background-color: #4CAF50;}
-
 
 /* Formulaire */
 
@@ -84,10 +87,10 @@ input[type=text], select {
 
 input[type=submit] {
   width: 100%;
-  background-color: #4CAF50;
+  background-color: #3DA154;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin: 30px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
