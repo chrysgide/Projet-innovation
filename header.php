@@ -32,7 +32,7 @@
 		        <a class="nav-link" href="Enregistre.php">Enregistrez une pièce</a>
 		      </li>
 		      <li class="nav-item <?php echo $_SESSION['menu_active_home_find_piece']; ?>">
-		        <a class="nav-link" href="Enregistre.php">Cherchez une piècee</a>
+		        <a class="nav-link" href="recherche.php">Cherchez une piècee</a>
 		      </li>
 		    </ul>
 		  </div>
