@@ -64,7 +64,7 @@ try
 
             // Vérification si tout s'est bien passé pour les deux requêtes et on enregistre le message de notification
            
-            if(empty(id_pers))
+            if(empty($id_pers))
             {
                 $_SESSION['notification'] = "<div class='alert alert-danger' role='alert'> Une erreur s'est produite lors de l'enregistrement de vos informations! <button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span></button></div>";
             }
