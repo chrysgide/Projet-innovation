@@ -71,9 +71,8 @@
 			            }
         
 					?>
-			    <input type="submit" name="submit" value="Enregistrez" id="bouton_envoi">
+			    <input type="submit" name="submit" onclick="confirm('Vous voulez-vous confirmer votre sauvégarde ?')" value="Enregistrez" id="bouton_envoi">
 				</form>
-
 			     		 
 			  				    
 		</div>
