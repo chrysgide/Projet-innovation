@@ -40,9 +40,9 @@ try
             
             // On reccupère l'id de la personne pour lié à la pièce qu'il a trouvé
             $id_pers = "";
-            $stmt = $conn->prepare("SELECT id_pers FROM pers_trouv WHERE numero = ?");
-            if ($stmt->execute(array($number))) {
-              while ($row = $stmt->fetch()) {
+            $stmt_get = $conn->prepare("SELECT id_pers FROM pers_trouv WHERE numero = ?");
+            if ($stmt_get->execute(array($number))) {
+              while ($row = $stmt_get->fetch()) {
                $id_pers = $row["id_pers"];
               }
             }
@@ -63,14 +63,14 @@ try
 
 
             // Vérification si tout s'est bien passé pour les deux requêtes et on enregistre le message de notification
-            if( $stmt->execute() AND  $stmt2->execute() )
+           
+            if(empty(id_pers))
             {
-                $_SESSION['notification'] = "<div class='alert alert-success' role='alert'> Votre pièce ainsi que vos informations ont été bien enregistré! <button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span></button></div>";
-
+                $_SESSION['notification'] = "<div class='alert alert-danger' role='alert'> Une erreur s'est produite lors de l'enregistrement de vos informations! <button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span></button></div>";
             }
             else
             { 
-                $_SESSION['notification'] = "<div class='alert alert-danger' role='alert'> Une erreur s'est produite lors de l'enregistrement de vos informations! <button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span></button></div>";
+                $_SESSION['notification'] = "<div class='alert alert-success' role='alert'> Votre pièce ainsi que vos informations ont été bien enregistré! <button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span></button></div>";
             }
 
             // On redirrige sur la page d'accueil 
